@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Leo_RxAndroidDemo</string>
+    <string name="str_base">基本</string>
+    <string name="map">转换(MAP)</string>
+    <string name="loading_failed">数据加载失败</string>
+    <string name="str_current_page">第%d页</string>
+    <string name="str_previous">上一页</string>
+    <string name="str_next">下一页</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_zip">压合(ZIP)</string>
+</resources>

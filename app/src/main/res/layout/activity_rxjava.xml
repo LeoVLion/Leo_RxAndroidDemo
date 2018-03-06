@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.administrator.leo_rxandroiddemo.RxJavaActivity">
+
+    <!--android:stateListAnimator="@null"
+        不加这个的话快速上下滑动 会崩溃抛异常
+        can't call void android.view.View.setElevation(float) on null object-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:stateListAnimator="@null">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/style_collapsedTitleText"
+            app:expandedTitleTextAppearance="@style/style_expandedTitleText"
+            app:statusBarScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/bg1"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/jjy" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jjy" />
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:tabMode="scrollable"
+            android:layout_alignParentBottom="true">
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v4.view.ViewPager>
+
+
+</android.support.design.widget.CoordinatorLayout>
